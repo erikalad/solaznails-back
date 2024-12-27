@@ -3,8 +3,8 @@ const { Router } = require('express');
 // //REQUIRE GET
 const getClientas = require("../controllers/GET/GetAllClients")
 const getFotos = require("../controllers/GET/GetAllFotos")
-// const getFuncionalidades = require("../controllers/Get/GetAllFuncionalidades.js")
-// const getAllCarts = require("../controllers/Get/GetAllCarts")
+const getTurnos = require("../controllers/GET/GetAllTurnos")
+const getVisitas = require("../controllers/GET/GetAllVisitas")
 
 // //REQUIRE GETID
 const getClientaId = require("../controllers/GETID/GetClientId")
@@ -45,8 +45,8 @@ const router = Router();
 // //GET
 router.use("/clientas", getClientas)
 router.use("/fotos", getFotos)
-// router.use("/funcionalidades", getFuncionalidades)
-// router.use("/procedures", getProcedure)
+router.use("/turnos", getTurnos)
+router.use("/visitas", getVisitas)
 // router.use("/carts", getAllCarts)
 
 // //POST
